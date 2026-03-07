@@ -1,0 +1,110 @@
+.container {
+  padding: 30px;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #1f2937;
+}
+
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  margin-bottom: 25px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.sectionTitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #374151;
+}
+
+.formGroup input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.button {
+  padding: 10px 15px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #1e40af;
+}
+
+/* Toggle Switch */
+.toggleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.toggle {
+  width: 45px;
+  height: 24px;
+  background: #d1d5db;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.toggle.active {
+  background: #2563eb;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.toggle.active .circle {
+  transform: translateX(21px);
+}

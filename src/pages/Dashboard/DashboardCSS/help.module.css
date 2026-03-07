@@ -1,0 +1,112 @@
+.container {
+  padding: 30px;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #1f2937;
+}
+
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  margin-bottom: 25px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.sectionTitle {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+/* FAQ */
+.faqItem {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 0;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 500;
+  color: #374151;
+  transition: color 0.3s;
+}
+
+.question:hover {
+  color: #2563eb;
+}
+
+.icon {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.active .answer {
+  max-height: 100px;
+  margin-top: 8px;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form input,
+.form textarea {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.button {
+  padding: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #1e40af;
+}
+
+/* System Info */
+.systemInfo p {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #4b5563;
+}

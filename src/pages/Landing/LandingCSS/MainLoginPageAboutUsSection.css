@@ -1,0 +1,121 @@
+/* Full Page Container with Gradient */
+.about-container {
+  min-height: 10vh;
+  width: 100%;
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  color: #f9fafb;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative floating circles (optional for modern look) */
+.about-container::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.about-container::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 50%;
+  bottom: -80px;
+  right: -80px;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+/* Page Title */
+.about-title {
+  font-size: 3rem;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #f9fafb;
+  z-index: 1;
+  position: relative;
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Glassmorphism Card with subtle animation */
+.card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 35px 30px;
+  width: 320px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border: none;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover effect with slight lift and rotation */
+.card:hover {
+  transform: translateY(-15px) rotateZ(1deg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Card headings */
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Card icons (optional, use emoji or SVG) */
+.card h2::before {
+  font-size: 1.5rem;
+}
+
+/* Card paragraphs */
+.card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #e5e7eb;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,9 @@
+.footer {
+  padding: 20px 10px;
+  text-align: center;
+  color: black;
+  border-top: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-size: 0.95rem;
+}

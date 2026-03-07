@@ -1,0 +1,193 @@
+.topbar {
+  height: 64px;
+  background: #0d0d44;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  margin-right: 40px;
+}
+
+.toggleButton {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.toggleButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.searchWrapper {
+  position: relative;
+}
+
+.searchInput {
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  outline: none;
+  padding: 8px 40px 8px 12px;
+  border-radius: 8px;
+  color: white;
+  width: 240px;
+}
+
+.searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.searchIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Notifications */
+
+.notificationWrapper {
+  position: relative;
+}
+
+.notification {
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #00ff87;
+  color: black;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+
+.notificationDropdown {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: white;
+  color: black;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.notificationItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  background: #f4f6ff;
+}
+
+.notificationItem:hover {
+  background: #e9ecff;
+}
+
+.deleteIcon {
+  color: red;
+  cursor: pointer;
+}
+
+.empty {
+  text-align: center;
+  color: gray;
+}
+
+/* Profile */
+
+.profileWrapper {
+  position: relative;
+}
+
+.user {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00ff87;
+}
+
+.profileDropdown {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 280px;
+  background: white;
+  color: black;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.profileImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.role {
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+.uploadLabel {
+  display: block;
+  background: linear-gradient(135deg, #00ff87, #00c853);
+  color: black;
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}

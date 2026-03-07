@@ -1,0 +1,353 @@
+.inventory {
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+}
+
+/* SEARCH */
+.searchBox {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 15px;
+  transition: all 0.5s ease;
+}
+
+.searchBox input {
+  padding: 10px 12px;
+  width: 250px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.searchBox button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #0d0d44;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* ERROR */
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* TOP ROW */
+.topRow {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.imBdmB
+{
+  background-color: #f5f5f5;
+
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+/* IMAGE */
+.imageBox img {
+  width: 340px;
+  height: 346px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.detailsBox {
+  width: 317px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* DETAILS + PIE WRAPPER */
+.detailsPieBox {
+  border:1px solid black;
+  width: 480px;
+  height: 350px;
+  gap: 20px;
+}
+
+
+.detailsBox h3 {
+  margin-bottom: 12px;
+  color: #0d0d44;
+  font-size: 28px;
+}
+
+/* PIE CHART */
+.pieChartBox {
+  flex: 0 0 35%;
+  background: #fff;
+  padding: 25px 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* BOTTOM ROW: LINE CHART */
+.bottomRow {
+  border: 1px solid black;
+  margin-top: 30px;
+}
+
+.lineChartBox {
+  flex: 0 0 70%;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.chartFilter {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.modalOverlay {
+  position: fixed;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modalContent {
+  background: #fff;
+  padding: 25px 20px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* title left, X right */
+}
+
+.modalHeader h2 {
+  margin: 0;
+}
+
+.closeBtn {
+  font-size: 22px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #0d0d44;
+}
+
+
+.modalContent label {
+  font-weight: 500;
+  margin-top: 10px;
+  color: #333;
+}
+
+.modalContent input,
+.modalContent .MuiTextField-root {
+  width: 95%;
+  padding: 8px 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* In/Out Date + Quantity row */
+.dateQtyRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.dateQtyRow .MuiTextField-root {
+  flex: 1;
+}
+
+.dateQtyRow input[type="number"] {
+  padding: 15px;
+  flex: 0.50; /* quantity smaller */
+}
+
+
+/* Update button */
+.submitBtn {
+  margin-top: 15px;
+  padding: 12px;
+  background: #0d44ff; /* new color */
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitBtn:hover {
+  background: #062bbd;
+}
+
+/* CUSTOM DROPDOWN FOR TREND TYPE (Yearly/Monthly) */
+.dropdownWrapper {
+  position: relative;
+}
+
+.dropdownWrapper button {
+  min-width: 150px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #0d0d44;
+  color: #fff;
+  font-weight: 500;
+}
+
+.dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown li {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+/* GRID OF ALL PRODUCTS */
+.allProductsGrid {
+  display: grid;
+  /* 7 items per row on desktop */
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.productCard {
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.productCard img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 5px;
+}
+
+.productCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* EDIT BUTTON same as search button */
+.editBtn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #0d0d44;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.editBtn:hover {
+  background-color: #062bbd;
+}
+
+.graphTitle {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* PAGINATION CONTAINER */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* PAGE BUTTONS */
+.pageBtn,
+.arrowBtn {
+  border: none;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.pageBtn:hover,
+.arrowBtn:hover {
+  background-color: #0d0d44;
+  color: #fff;
+}
+
+/* ACTIVE PAGE */
+.activePage {
+  background-color: #0d0d44;
+  color: #fff;
+}
+
+/* DOTS */
+.dots {
+  padding: 6px 8px;
+  color: #777;
+  font-weight: 500;
+}
+
+
+.yearSelect {
+  margin-left: 15px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+}

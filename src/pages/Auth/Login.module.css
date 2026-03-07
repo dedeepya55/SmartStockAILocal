@@ -1,0 +1,412 @@
+.loginContainer {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  color: white;
+  overflow: hidden;
+  background: #dbeafe;
+}
+
+.loginSplitContainer {
+  display: grid;
+  grid-template-columns: 58% 42%;
+  background: #eceff4;
+}
+
+.leftPanel {
+  position: relative;
+  padding: 34px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: radial-gradient(circle at 25% 30%, #1f3f7a 0%, #102d5d 42%, #071c3f 100%);
+  overflow: hidden;
+}
+
+.leftOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 35%, rgba(59, 130, 246, 0.12), transparent 50%);
+}
+
+.brand {
+  position: relative;
+  z-index: 1;
+  color: #dbeafe;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.leftContent {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  margin-top: 20px;
+}
+
+.heroHeading {
+  margin: 0;
+  font-size: 62px;
+  line-height: 1.04;
+  color: #dbeafe;
+  font-weight: 700;
+}
+
+.heroText {
+  margin-top: 22px;
+  max-width: 560px;
+  color: #cbd5e1;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.statsRow {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(140px, 1fr));
+  gap: 14px;
+}
+
+.statCard {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: rgba(15, 23, 42, 0.2);
+}
+
+.statCard strong {
+  display: block;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.statCard span {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #cbd5e1;
+}
+
+.rightPanel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.waveBackground {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.waveLayerOne,
+.waveLayerTwo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.waveLayerOne {
+  z-index: 1;
+}
+
+.waveLayerTwo {
+  z-index: 2;
+}
+
+/* Remove these if you don't want any background image or pattern */
+.backgroundImage {
+  display: none; /* hide image */
+}
+
+.pattern {
+  display: none; /* hide radial gradient */
+}
+
+.rightSide {
+  height: 100%;
+  width: 100%;
+  display: flex;  
+  justify-content: center;
+  align-items: center;   
+  padding-right: 120px; 
+  position: relative;
+  z-index: 2;
+}
+
+.loginBox {
+  width: 350px;
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.15);
+  color: #1f2937;
+}
+
+@media (max-width: 900px) {
+  .rightSide {
+    justify-content: center;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .loginBox {
+    width: 90%;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #2563eb;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 500;
+  color: #1e3a8a;
+}
+
+.loginSplitContainer .loginBox {
+  width: min(440px, 100%);
+  padding: 34px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+.loginSplitContainer .title {
+  text-align: left;
+  font-size: 34px;
+  letter-spacing: 0;
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+
+.loginSplitContainer .subtitle {
+  text-align: left;
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.loginSplitContainer .inputGroup {
+  margin-bottom: 14px;
+}
+
+.loginSplitContainer .inputGroup label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+}
+
+.loginSplitContainer .inputGroup input {
+  margin-top: 8px;
+  background: #eff4fb;
+  border: 1px solid #dbe5f2;
+}
+
+.loginSplitContainer .options {
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.loginSplitContainer .loginBtn {
+  background: #0b1f4f;
+  border-color: #0b1f4f;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.loginSplitContainer .loginBtn:hover {
+  background: #0a1a40;
+  border-color: #0a1a40;
+}
+
+/* ... rest of your CSS remains the same ... */
+
+.inputGroup {
+  margin-bottom: 18px;
+}
+
+.inputGroup label {
+  font-size: 14px;
+  opacity: 1;
+  color: #334155;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  outline: none;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.inputGroup input::placeholder {
+  color: #94a3b8;
+}
+
+.passwordWrapper {
+  position: relative;
+}
+
+.passwordWrapper input {
+  padding-right: 40px;
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye {
+  width: 20px;
+  height: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: relative;
+}
+
+.pupil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: white;
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.eyeIconActive .slash {
+  opacity: 1;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.options input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+.forgot {
+  background: none;
+  border: none;
+  color: #4f8cff;
+  cursor: pointer;
+}
+
+.loginBtn {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  border: 2px solid #4f8cff;
+  border-radius: 8px;
+  color: #4f8cff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.loginBtn:hover {
+  background: #4f8cff;
+  color: white;
+}
+
+.footerText {
+  margin-top: 15px;
+  text-align: center;
+  opacity: 0.6;
+  font-size: 13px;
+}
+
+.error {
+  margin-bottom: 12px;
+  color: #dc2626;
+  font-size: 14px;
+  text-align: center;
+}
+
+.loginSplitContainer .error {
+  text-align: left;
+}
+
+@media (max-width: 1200px) {
+  .heroHeading {
+    font-size: 48px;
+  }
+
+  .statsRow {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .loginSplitContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .leftPanel {
+    display: none;
+  }
+
+  .rightPanel {
+    padding: 18px;
+  }
+
+  .loginSplitContainer .loginBox {
+    padding: 26px;
+  }
+
+  .loginSplitContainer .title {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,275 @@
+.main {
+  flex: 1;
+  background-color: #f9fafb;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.main h2 {
+  color: #0d0d44;
+  margin-bottom: 15px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.container {
+  padding: 30px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.uploadBox {
+  border: 2px dashed #4a90e2;
+  padding: 25px;
+  border-radius: 12px;
+  background: #f9fbff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.uploadBox input {
+  cursor: pointer;
+}
+
+.uploadBox button {
+  padding: 10px 20px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.uploadBox button:hover {
+  background: #357abd;
+}
+
+.uploadBox button:disabled {
+  background: #9bbce6;
+  cursor: not-allowed;
+}
+
+.previewImage {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.resultCard {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+.resultImage {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.table th {
+  background: #f1f5ff;
+  font-weight: 600;
+}
+
+.correctStatus {
+  background: #e6f7ec;
+  color: #1e8e3e;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.incorrectStatus {
+  background: #ffe5e5;
+  color: #d93025;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.rowSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rowMisplaced {
+  background: #fff3f3;
+  border-left: 5px solid #d93025;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.rowCorrect {
+  background: #f1f8f4;
+  border-left: 5px solid #1e8e3e;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+.container {
+  padding: 30px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.uploadBox {
+  border: 2px dashed #4a90e2;
+  padding: 25px;
+  border-radius: 12px;
+  background: #f9fbff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.uploadBox input {
+  cursor: pointer;
+}
+
+.uploadBox button {
+  padding: 10px 20px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.uploadBox button:hover {
+  background: #357abd;
+}
+
+.uploadBox button:disabled {
+  background: #9bbce6;
+  cursor: not-allowed;
+}
+
+.previewImage {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.summaryCard {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.summaryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.badgeSuccess {
+  background: #e6f7ec;
+  color: #1e8e3e;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.badgeDanger {
+  background: #ffe5e5;
+  color: #d93025;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.badgeError {
+  background: #fce8e6;
+  color: #b00020;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.correctStatus {
+  background: #e6f7ec;
+  color: #1e8e3e;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.incorrectStatus {
+  background: #ffe5e5;
+  color: #d93025;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.errorStatus {
+  background: #fce8e6;
+  color: #b00020;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.resultCard {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+.resultImage {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
