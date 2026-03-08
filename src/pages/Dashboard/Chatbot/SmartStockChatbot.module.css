@@ -1,83 +1,134 @@
+/* Floating Chat Button */
 .floatingBtn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #0d0d44;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, #0d0d44, #2b2bb3);
   color: white;
-  width: 55px;
-  height: 55px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 999;
   font-size: 22px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease;
+  z-index: 999;
 }
 
+.floatingBtn:hover {
+  transform: scale(1.08);
+}
+
+/* Chat Window */
 .chatWindow {
   position: fixed;
-  bottom: 90px;
-  right: 20px;
-  width: 320px;
-  height: 420px;
+  bottom: 95px;
+  right: 24px;
+  width: 340px;
+  height: 460px;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   z-index: 999;
 }
 
+/* Header */
 .header {
-  background: #0d0d44;
+  background: linear-gradient(135deg, #0d0d44, #2b2bb3);
   color: white;
-  padding: 12px;
+  padding: 14px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
+  font-size: 15px;
 }
 
+/* Chat Messages Area */
 .body {
   flex: 1;
-  padding: 10px;
+  padding: 14px;
   overflow-y: auto;
-  background: #f9f9f9;
+  background: #f6f7fb;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Message Bubble */
 .msg {
   margin-bottom: 10px;
-  padding: 8px 12px;
-  border-radius: 12px;
+  padding: 9px 14px;
+  border-radius: 14px;
   max-width: 80%;
-  font-size: 14px;
+  font-size: 13.5px;
+  line-height: 1.4;
+  word-wrap: break-word;
 }
 
+/* Bot Message */
 .bot {
-  background: #e6e9ff;
+  background: #e7e9ff;
   align-self: flex-start;
 }
 
+/* User Message */
 .user {
   background: #0d0d44;
   color: white;
   align-self: flex-end;
 }
 
-.quickQuestions {
+/* Input Area */
+.inputArea {
+  display: flex;
   padding: 10px;
   border-top: 1px solid #eee;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  background: #fff;
 }
 
-.quickQuestions button {
-  background: #f1f1f1;
+/* Input Box */
+.inputArea input {
+  flex: 1;
   border: none;
-  border-radius: 12px;
-  padding: 6px 10px;
-  font-size: 12px;
+  outline: none;
+  background: #f3f4f9;
+  border-radius: 20px;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+/* Send Button */
+.inputArea button {
+  background: #0d0d44;
+  color: white;
+  border: none;
+  margin-left: 8px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.inputArea button:hover {
+  background: #2b2bb3;
+}
+
+/* Scrollbar styling */
+.body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.body::-webkit-scrollbar-thumb {
+  background: #cfcfe8;
+  border-radius: 10px;
 }

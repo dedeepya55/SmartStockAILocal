@@ -23,8 +23,7 @@ const Login = () => {
     setLoading(true);
     try {
       const response = await loginUser({ email, password, rememberMe });
-      sessionStorage.setItem("token", response.data.token);
-
+      localStorage.setItem("token", response.data.token);
       setTimeout(() => {
         navigate("/dashboard");
       }, 600);
