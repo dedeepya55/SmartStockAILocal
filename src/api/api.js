@@ -127,3 +127,26 @@ export const addUserAPI = (data, token) =>
             Authorization: `Bearer ${token}`,
         },
     }).then(res => res.data);
+
+/* ================= DASHBOARD ANALYTICS ================= */
+
+// Order summary
+export const getOrderSummaryAPI = () =>
+    axios.get(`${BASE_URL_products}/orders/summary`).then(res => res.data);
+
+// Weekly revenue
+export const getWeeklyRevenueAPI = () =>
+    axios.get(`${BASE_URL_products}/revenue/weekly`).then(res => res.data);
+
+// Monthly revenue
+export const getMonthlyRevenueAPI = () =>
+    axios.get(`${BASE_URL_products}/revenue/monthly`).then(res => res.data);
+
+// Yearly revenue
+export const getYearlyRevenueAPI = () =>
+    axios.get(`${BASE_URL_products}/revenue/yearly`).then(res => res.data);
+
+// Top selling products
+export const getTopSellingProductsAPI = (limit = 5) =>
+    axios.get(`${BASE_URL_products}/products/top-selling?limit=${limit}`)
+        .then(res => res.data);
