@@ -26,11 +26,21 @@ const SmartStockChatbot = () => {
 
       if (Array.isArray(res.data)) {
         const list = res.data
-            .map((item) =>
-                item.Title
-                    ? `• ${item.Title} (Qty: ${item.QTY ?? "N/A"})`
-                    : `• ${item.message}`
-            )
+            .map((item) => {
+              if (item.Title) {
+                return `• ${item.Title} (Qty: ${item.QTY ?? "N/A"})`;
+              }
+
+              if (item.product) {
+                return `• ${item.product} (Predicted Sales: ${item.predictedSales})`;
+              }
+
+              if (item.message) {
+                return `• ${item.message}`;
+              }
+
+              return "• Data unavailable";
+            })
             .join("\n");
 
         setMessages((prev) => [
