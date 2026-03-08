@@ -11,6 +11,7 @@ const Dashboard = () => {
   const [search, setSearch] = useState("");
     const [notifications, setNotifications] = useState([]);
   const token = localStorage.getItem("token");
+    const [user, setUser] = useState(null);
 
   useEffect(() => {
     const fetch = () => {
@@ -32,11 +33,12 @@ const Dashboard = () => {
         setSearch={setSearch}
         notifications={notifications}
         setNotifications={setNotifications}
+        setUser={setUser}
       />
       <div className={styles.body}>
         <Sidebar sidebarOpen={sidebarOpen} />
         <div className={styles.contentArea}>
-          <Outlet context={{ search }} />
+          <Outlet context={{ search,user  }} />
         </div>
       </div>
       <SmartStockChatbot />

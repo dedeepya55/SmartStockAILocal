@@ -10,7 +10,8 @@ import {
   faChartColumn,
   faGear,
   faCircleQuestion,
-  faArrowRightFromBracket
+  faArrowRightFromBracket,
+  faBoxes
 } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./DashboardCSS/Sidebar.module.css";
@@ -23,6 +24,7 @@ const Sidebar = ({ sidebarOpen }) => {
     "AI – Product Quality Check": faQrcode,
     "Orders": faCartArrowDown,
     "Shipping": faTruckFast,
+    "Product Batches": faBoxes,
     "Reports": faChartColumn,
     "Settings": faGear,
     "Help & Support": faCircleQuestion,
@@ -36,7 +38,8 @@ const Sidebar = ({ sidebarOpen }) => {
     { name: "AI – Product Quality Check", path: "/dashboard/product-quality" },
     { name: "Orders", path: "/dashboard/orders" },
     { name: "Shipping", path: "/dashboard/shipping" },
-    { name: "Reports", path: "/dashboard/reports" }
+    { name: "Reports", path: "/dashboard/reports" },
+    { name: "Product Batches", path: "/dashboard/batches" }
   ];
 
   const bottomMenu = [

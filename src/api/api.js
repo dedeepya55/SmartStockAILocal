@@ -103,3 +103,9 @@ export const updateProfileImageAPI = (formData, token) =>
         "Content-Type": "multipart/form-data",
       },
     }).then(res => res.data);
+// Batches APIs
+export const getBatches = (params = {}) =>
+    axios.get(`${API_BASE}/api/batches`, { params });
+
+export const getBatchById = (batchId) =>
+    axios.get(`${API_BASE}/api/batches/${batchId}`);

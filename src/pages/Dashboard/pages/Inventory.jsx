@@ -47,6 +47,8 @@ const Inventory = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [selectedYear, setSelectedYear] = useState(null);
 
+  const { user } = useOutletContext();
+
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 14; // Adjust number per page
@@ -203,14 +205,14 @@ const trendData = analytics
     return rangeWithDots;
   };
 
-  
+
   useEffect(() => {
     if (trendType === "monthly" && analytics?.monthlyTrend?.length > 0) {
       setSelectedYear(analytics.monthlyTrend[0].year);
     }
   }, [trendType, analytics]);
 
-  
+
   return (
     <div className={styles.inventory}>
       <h2>Product Information</h2>
@@ -224,13 +226,14 @@ const trendData = analytics
         />
         <button onClick={handleSearch}>Search</button>
 
-        
 
-        {product && (
+
+        {product && (user?.role === "admin" || user?.role === "worker") && (
           <Popup trigger={<button className={styles.editBtn}>Edit</button>} modal nested>
             {(close) => (
               <div className={styles.modalContent}>
                 <div className={styles.modalHeader}>
+
                   <h2>Edit Details</h2>
                   <IconButton onClick={close}>
                     <FontAwesomeIcon icon={faX} />

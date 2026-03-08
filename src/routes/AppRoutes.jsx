@@ -16,6 +16,7 @@ import Shipping from "../pages/Dashboard/pages/Shipping";
 import Reports from "../pages/Dashboard/pages/Reports";
 import Settings from "../pages/Dashboard/pages/Settings";
 import Help from "../pages/Dashboard/pages/Help";
+import DashboardBatches from "../pages/Dashboard/pages/DashboardBatches";
 
 export default function AppRoutes() {
   return (
@@ -36,6 +37,7 @@ export default function AppRoutes() {
         <Route path="reports" element={<Reports />} />
         <Route path="settings" element={<Settings />} />
         <Route path="help" element={<Help />} />
+        <Route path="batches" element={<DashboardBatches />} />
       </Route>
     </Routes>
   );

@@ -22,7 +22,8 @@ const Topbar = ({
   search,
   setSearch,
   notifications,
-  setNotifications
+  setNotifications,
+    setUser
 }) => {
   const token = sessionStorage.getItem("token");
 
@@ -43,6 +44,7 @@ const Topbar = ({
       try {
         const data = await getProfileAPI(token);
         setProfileData(data);
+        if (setUser) setUser(data);
       } catch (err) {
         console.error("Profile load failed");
       }
