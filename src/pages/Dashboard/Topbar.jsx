@@ -25,7 +25,7 @@ const Topbar = ({
   setNotifications,
     setUser
 }) => {
-  const token = sessionStorage.getItem("token");
+  const token = localStorage.getItem("token") || sessionStorage.getItem("token");
 
   const [showNotifications, setShowNotifications] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
@@ -239,8 +239,8 @@ const Topbar = ({
                   className={styles.profileImage}
                 />
                 <div>
-                  <h4>{profileData.name}</h4>
-                  <p>{profileData.email}</p>
+                  <h4>{profileData.email}</h4>
+                  <p>{profileData.role}</p>
                 </div>
               </div>
 
