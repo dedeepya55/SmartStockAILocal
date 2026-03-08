@@ -118,3 +118,12 @@ export const changePasswordAPI = (data, token) =>
             Authorization: `Bearer ${token}`,
         },
     });
+
+// Add New User (Admin)
+export const addUserAPI = (data, token) =>
+    axios.post(`${BASE_URL_LOGIN}/add-user`, data, {
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
+    }).then(res => res.data);
