@@ -109,3 +109,12 @@ export const getBatches = (params = {}) =>
 
 export const getBatchById = (batchId) =>
     axios.get(`${API_BASE}/api/batches/${batchId}`);
+
+//Change Password APIs
+export const changePasswordAPI = (data, token) =>
+    axios.put(`${BASE_URL_LOGIN}/change-password`, data, {
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
+    });
